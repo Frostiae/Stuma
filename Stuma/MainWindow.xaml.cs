@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using Stuma.ViewModels;
 using Stuma.Views;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -36,7 +35,7 @@ namespace Stuma
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new MainViewModel();
+            mainFrame.Navigate(new Uri("/Views/LoginView.xaml", UriKind.RelativeOrAbsolute));
             client = new FirebaseClient(config);
         }
 
@@ -69,6 +68,12 @@ namespace Stuma
             {
 
             }
+        }
+
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+                this.DragMove();
         }
     }
 }

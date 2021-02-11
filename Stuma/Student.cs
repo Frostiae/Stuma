@@ -10,5 +10,11 @@ namespace Stuma
     {
         public string username { get; set; }
         public List<Task> tasks { get; set; }
+
+        public Student(string user)
+        {
+            username = user;
+            tasks = new List<Task>();
+        }
     }
 }

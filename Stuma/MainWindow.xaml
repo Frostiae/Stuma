@@ -5,16 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Stuma"
         mc:Ignorable="d"
-        Title="MainWindow" Height="850" Width="1300">
+        MouseDown="Window_MouseDown"
+        Title="Stuma" Height="750" Width="1300" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="auto"/>
-        </Grid.RowDefinitions>
-        <ContentControl Content="{Binding selectedViewModel}"/>
-        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Margin="10" Width="200" Content="Home" Command="{Binding UpdateViewCommand}" CommandParameter="Home"/>
-            <Button Margin="10" Width="200" Content="Login" Command="{Binding UpdateViewCommand}" CommandParameter="Login"/>
-        </StackPanel>
+        <Frame Name="mainFrame" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

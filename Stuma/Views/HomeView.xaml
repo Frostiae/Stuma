@@ -1,12 +1,12 @@
-﻿<UserControl x:Class="Stuma.Views.HomeView"
+﻿<Page x:Class="Stuma.Views.HomeView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Stuma.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="850" d:DesignWidth="1300" Background="White">
+             d:DesignHeight="750" d:DesignWidth="1300" Background="White">
     <Grid>
         <Label FontSize="36" Content="Home" HorizontalAlignment="Center"/>
     </Grid>
-</UserControl>
+</Page>
