@@ -5,8 +5,37 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Stuma.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="750" d:DesignWidth="1300" Background="White">
+             d:DesignHeight="750" d:DesignWidth="1300" Background="#0A0B0D">
     <Grid>
-        <Label FontSize="36" Content="Home" HorizontalAlignment="Center"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="800"/>
+            <ColumnDefinition Width="250"/>
+        </Grid.ColumnDefinitions>
+        <!-- LEFT BAR BEGIN -->
+        <StackPanel Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Center">
+            <Label Content="Stuma" FontSize="48" FontFamily="/Stuma;component/Fonts/#Valeria Medium" Margin="20" Foreground="#A6826D"/>
+            <Button Content="Dashboard" FontFamily="/Stuma;component/Fonts/#Coolvetica Rg" FontSize="24" Margin="10" Background="#819FA6" Foreground="#0A0B0D"/>
+            <Button Content="Tasks" FontFamily="/Stuma;component/Fonts/#Coolvetica Rg" FontSize="24" Margin="10" Background="#819FA6" Foreground="#0A0B0D"/>
+            <Button Content="Activation" FontFamily="/Stuma;component/Fonts/#Coolvetica Rg" FontSize="24" Margin="10" Background="#819FA6" Foreground="#0A0B0D"/>
+            <Button x:Name="AddTask" Content="Add Task" FontFamily="/Stuma;component/Fonts/#Coolvetica Rg" FontSize="24" Margin="10" Background="#819FA6" Foreground="#0A0B0D" Click="AddTask_Click"/>
+        </StackPanel>
+
+        <!-- CENTER BEGIN -->
+        <StackPanel Grid.Column="1" Orientation="Vertical">
+        <!-- TASKS BOX BEGIN -->
+            <StackPanel Orientation="Vertical">
+                <ListBox x:Name="taskListBox" Margin="20">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding Path=title}" />
+                                <TextBlock Text="{Binding Path=description}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Page>

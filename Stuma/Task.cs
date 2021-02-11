@@ -13,7 +13,7 @@ namespace Stuma
         Regular = 2,
         Recurring = 3 // A task with a duration, such as 05:00 - 06:00
     }
-    public abstract class Task
+    public class Task
     {
         public TaskType type { get; set; }
         public string title { get; set; }

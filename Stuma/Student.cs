@@ -16,5 +16,11 @@ namespace Stuma
             username = user;
             tasks = new List<Task>();
         }
+
+        public void AddTask(Task task)
+        {
+            // TODO: Update database
+            tasks.Add(task);
+        }
     }
 }

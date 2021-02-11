@@ -11,10 +11,10 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="0" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Left" MinWidth="500" MaxWidth="600" Background="Beige" Height="750">
-            <Label Content="Login" FontFamily="Verdana" FontSize="36" Margin="10"/>
-            <Label Content="G-mail address" FontFamily="Verdana" FontSize="18" Margin="10" Foreground="#FF787878"/>
-            <TextBox Margin="10" MinHeight="35"/>
+        <StackPanel Grid.Column="0" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Left" MinWidth="500" MaxWidth="600" Background="#0A0B0D" Height="750">
+            <Label Content="Login" FontFamily="Verdana" FontSize="36" Margin="10" Foreground="#A6826D"/>
+            <Label Content="G-mail address" FontFamily="Verdana" FontSize="18" Margin="10" Foreground="#819FA6"/>
+            <TextBox Margin="10" MinHeight="35" Background="#FF2F3136"/>
             <Button x:Name="LoginButton" Margin="10" Content="LOGIN" MinHeight="25" Click="LoginButton_Click"/>
         </StackPanel>
     </Grid>
